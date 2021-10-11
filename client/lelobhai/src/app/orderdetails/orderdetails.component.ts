@@ -35,7 +35,7 @@ export class OrderdetailsComponent implements OnInit {
       }
       try {
         const data = await this.rest.get(
-          `http://localhost:3030/api/accounts/orders/${this.orderId}`);
+          `http://52.14.70.131:3030/api/accounts/orders/${this.orderId}`);
         data['success']
               ? (this.products = data['order'])
               : this.data.error(data['message']);
