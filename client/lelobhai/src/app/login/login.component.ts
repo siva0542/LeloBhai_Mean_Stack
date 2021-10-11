@@ -1,20 +1,15 @@
-//Logincomponent.ts - Type Script file that contains code to render Login feature to elearning application
-
-//including the required files and services
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { RestApiService } from '../rest-api.service';
 
-//component specifc details 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
 
-//exporting Login Component 
 export class LoginComponent implements OnInit {
   email = '';
   password = '';

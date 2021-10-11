@@ -1,18 +1,13 @@
-//Categories component.ts - Type Script file that contains code to render Categories feature to elearning application
-
-//including the required files and services 
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../rest-api.service';
 import { DataService } from '../data.service';
 
-//Component specifications 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss']
 })
 
-//exporting the categories component 
 export class CategoriesComponent implements OnInit {
   categories: any;
 

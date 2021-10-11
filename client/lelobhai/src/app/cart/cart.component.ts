@@ -1,20 +1,15 @@
-//Cart component.ts - Type Script file that contains code to render cart feature to elearning application
-
-//including the required files and services 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { DataService } from '../data.service';
 import { RestApiService } from '../rest-api.service';
 
-//componnet files specifications 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
 
-//exporting the cart component 
 export class CartComponent implements OnInit {
   btnDisabled = false;
   handler: any;
