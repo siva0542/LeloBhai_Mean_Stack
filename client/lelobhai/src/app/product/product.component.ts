@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(res => {
       this.rest
-        .get(`http://18.222.233.253:5000/api/product/${res['id']}`)
+        .get(`http://localhost:5000/api/product/${res['id']}`)
         .then(data => {
           data['success']
             ? (this.product = data['product'])

@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     try {
       if (this.validate()) {
         const data = await this.rest.post(
-          'http://18.222.233.253:5000/api/accounts/login',
+          'http://localhost:5000/api/accounts/login',
           {
             email: this.email,
             password: this.password,

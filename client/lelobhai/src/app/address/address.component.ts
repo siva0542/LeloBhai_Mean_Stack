@@ -17,7 +17,7 @@ export class AddressComponent implements OnInit {
   async ngOnInit() {
     try {
       const data = await this.rest.get(
-        'http://18.222.233.253:5000/api/accounts/address'
+        'http://localhost:5000/api/accounts/address'
       );
 
       if (
@@ -38,7 +38,7 @@ export class AddressComponent implements OnInit {
     this.btnDisabled = true;
     try {
       const res = await this.rest.post(
-        'http://18.222.233.253:5000/api/accounts/address',
+        'http://localhost:5000/api/accounts/address',
         this.currentAddress
       );
 

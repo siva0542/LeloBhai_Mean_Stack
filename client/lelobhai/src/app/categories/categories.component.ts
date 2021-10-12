@@ -22,7 +22,7 @@ export class CategoriesComponent implements OnInit {
   async ngOnInit() {
     try {
       const data = await this.rest.get(
-        'http://18.222.233.253:5000/api/categories'
+        'http://localhost:5000/api/categories'
       );
       data['success']
         ? (this.categories = data['categories'])
@@ -36,7 +36,7 @@ export class CategoriesComponent implements OnInit {
     this.btnDisabled = true;
     try {
       const data = await this.rest.post(
-        'http://18.222.233.253:5000/api/categories',
+        'http://localhost:5000/api/categories',
         { category: this.newCategory }
       );
       data['success']

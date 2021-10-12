@@ -29,7 +29,7 @@ export class PostProductComponent implements OnInit {
   async ngOnInit() {
     try {
       const data = await this.rest.get(
-        'http://18.222.233.253:5000/api/categories'
+        'http://localhost:5000/api/categories'
       );
       data['success']
         ? (this.categories = data['categories'])
@@ -86,7 +86,7 @@ export class PostProductComponent implements OnInit {
           }
         }
         const data = await this.rest.post(
-          'http://18.222.233.253:5000/api/seller/products',
+          'http://localhost:5000/api/seller/products',
           form
         );
         data['success']

@@ -60,7 +60,7 @@ export class SettingsComponent implements OnInit {
     try {
       if (this.validate(this.currentSettings)) {
         const data = await this.rest.post(
-          'http://18.222.233.253:5000/api/accounts/profile',
+          'http://localhost:5000/api/accounts/profile',
           {
             name: this.currentSettings['name'],
             email: this.currentSettings['email'],

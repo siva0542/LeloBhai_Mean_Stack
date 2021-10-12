@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit() {
     try {
-      const data = await this.rest.get('http://18.222.233.253:5000/api/products');
+      const data = await this.rest.get('http://localhost:5000/api/products');
       data['success']
         ? (this.products = data['products'])
         : this.data.error('Could not fetch products.');
