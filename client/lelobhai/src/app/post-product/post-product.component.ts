@@ -21,7 +21,7 @@ export class PostProductComponent implements OnInit {
   btnDisabled = false;
 
   constructor(
-    private data: DataService,
+    public data: DataService,
     private rest: RestApiService,
     private router: Router
   ) { }
@@ -29,7 +29,7 @@ export class PostProductComponent implements OnInit {
   async ngOnInit() {
     try {
       const data = await this.rest.get(
-        'http://52.14.70.131:3030/api/categories'
+        'http://18.222.233.253:5000/api/categories'
       );
       data['success']
         ? (this.categories = data['categories'])
@@ -86,7 +86,7 @@ export class PostProductComponent implements OnInit {
           }
         }
         const data = await this.rest.post(
-          'http://52.14.70.131:3030/api/seller/products',
+          'http://18.222.233.253:5000/api/seller/products',
           form
         );
         data['success']

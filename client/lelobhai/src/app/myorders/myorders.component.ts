@@ -10,12 +10,12 @@ import { RestApiService } from '../rest-api.service';
 export class MyordersComponent implements OnInit {
   myorders: any;
 
-  constructor(private data: DataService, private rest: RestApiService) { }
+  constructor(public data: DataService, private rest: RestApiService) { }
 
   async ngOnInit() {
     try {
       const data = await this.rest.get(
-        'http://52.14.70.131:3030/api/accounts/orders'
+        'http://18.222.233.253:5000/api/accounts/orders'
       );
       data['success']
         ? (this.myorders = data['orders'])

@@ -14,7 +14,7 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private data: DataService,
+    public data: DataService,
     private rest: RestApiService,
     private router: Router,
   ) {}
@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(res => {
       this.rest
-        .get(`http://52.14.70.131:3030/api/product/${res['id']}`)
+        .get(`http://18.222.233.253:5000/api/product/${res['id']}`)
         .then(data => {
           data['success']
             ? (this.product = data['product'])

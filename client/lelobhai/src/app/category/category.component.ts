@@ -15,7 +15,7 @@ export class CategoryComponent implements OnInit {
   page = 1;
 
   constructor(
-    private data: DataService,
+    public data: DataService,
     private activatedRoute: ActivatedRoute,
     private rest: RestApiService,
   ) {}
@@ -41,7 +41,7 @@ export class CategoryComponent implements OnInit {
     }
     try {
       const data = await this.rest.get(
-        `http://52.14.70.131:3030/api/categories/${this.categoryId}?page=${this
+        `http://18.222.233.253:5000/api/categories/${this.categoryId}?page=${this
           .page - 1}`,
       );
       data['success']

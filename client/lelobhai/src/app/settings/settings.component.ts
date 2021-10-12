@@ -11,7 +11,7 @@ export class SettingsComponent implements OnInit {
   btnDisabled = false;
   currentSettings: any;
 
-  constructor(private data: DataService, private rest: RestApiService) { }
+  constructor(public data: DataService, private rest: RestApiService) { }
 
   async ngOnInit() {
     try {
@@ -60,7 +60,7 @@ export class SettingsComponent implements OnInit {
     try {
       if (this.validate(this.currentSettings)) {
         const data = await this.rest.post(
-          'http://52.14.70.131:3030/api/accounts/profile',
+          'http://18.222.233.253:5000/api/accounts/profile',
           {
             name: this.currentSettings['name'],
             email: this.currentSettings['email'],

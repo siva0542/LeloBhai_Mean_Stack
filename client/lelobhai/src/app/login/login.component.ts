@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private rest: RestApiService,
-    private data: DataService,
+    public data: DataService,
   ) {}
 
   ngOnInit() {}
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     try {
       if (this.validate()) {
         const data = await this.rest.post(
-          'http://52.14.70.131:3030/api/accounts/login',
+          'http://18.222.233.253:5000/api/accounts/login',
           {
             email: this.email,
             password: this.password,

@@ -15,7 +15,7 @@ export class OrderdetailsComponent implements OnInit {
   
     constructor(
       private activatedRoute: ActivatedRoute,
-      private data: DataService,
+      public data: DataService,
       private rest: RestApiService,
       private router: Router,
     ) {}
@@ -35,7 +35,7 @@ export class OrderdetailsComponent implements OnInit {
       }
       try {
         const data = await this.rest.get(
-          `http://52.14.70.131:3030/api/accounts/orders/${this.orderId}`);
+          `http://18.222.233.253:5000/api/accounts/orders/${this.orderId}`);
         data['success']
               ? (this.products = data['order'])
               : this.data.error(data['message']);

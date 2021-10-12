@@ -22,7 +22,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private data: DataService,
+    public data: DataService,
     private rest: RestApiService,
   ) {}
 
@@ -57,7 +57,7 @@ export class RegistrationComponent implements OnInit {
     try {
       if (this.validate()) {
         const data = await this.rest.post(
-          'http://52.14.70.131:3030/api/accounts/signup',
+          'http://18.222.233.253:5000/api/accounts/signup',
           {
             name: this.name,
             email: this.email,
